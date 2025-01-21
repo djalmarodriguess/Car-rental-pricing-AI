@@ -98,9 +98,6 @@ def executar_script():
     navegador.execute_script(script2)
     print("Mês e ano selecionados com sucesso via JavaScript!")
 
-    # Pausar para garantir que o navegador carregue completamente
-    time.sleep(2)
-
     # Coordenadas (X, Y) do botão "Dia 10"
     coordenadas_x = 1318
     coordenadas_y = 545
