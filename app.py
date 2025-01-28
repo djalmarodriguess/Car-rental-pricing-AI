@@ -43,12 +43,12 @@ def executar_script():
         EC.presence_of_element_located((By.XPATH, "//input[contains(@placeholder, 'Onde você quer alugar?')]"))
     )
     print("Clique no campo Local!")
-    # Digitar "São Paulo" no campo de busca
+    # Digitar a cidade no campo de busca
     campo_busca.send_keys("São Paulo")
     # Aguardar o carregamento das opções
     time.sleep(1)
 
-    # Localizar e clicar na opção "SAO PAULO - GUARULHOS AEROPORTO"
+    # Localizar e clicar na opção de retirada do veículo
     opcao = WebDriverWait(navegador, 10).until(
         EC.element_to_be_clickable((By.XPATH, "//a[contains(text(), 'SAO PAULO - GUARULHOS AEROPORTO')]"))
     )
@@ -71,12 +71,13 @@ def executar_script():
         selectYear.dispatchEvent(new Event('change'));
     """
     navegador.execute_script(script1)
-    print("Mês e ano selecionados com sucesso via JavaScript!")
+    print("Mês e ano da data de retirada selecionados com sucesso!")
 
     # Esperar e clicar no botão do dia específico
     botao_dia = WebDriverWait(navegador, 15).until(
         EC.presence_of_element_located((By.XPATH, "//button[@class='pika-button pika-day' and @data-pika-day='8' and @data-pika-month='1' and @data-pika-year='2025']"))
     ).click()
+    print("Dia da data de retirada selecionado com sucesso!")
 
     # Esperar e clicar no botão do calendário de devolução
     calendario_devolucao = WebDriverWait(navegador, 15).until(
@@ -96,7 +97,7 @@ def executar_script():
         selectYear.dispatchEvent(new Event('change'));
     """
     navegador.execute_script(script2)
-    print("Mês e ano selecionados com sucesso via JavaScript!")
+    print("Mês e ano da data de devolução selecionados com sucesso!")
 
     # Coordenadas (X, Y) do botão "Dia 10"
     coordenadas_x = 1318
@@ -105,7 +106,7 @@ def executar_script():
     # Mover o mouse para as coordenadas e clicar
     pyautogui.moveTo(coordenadas_x, coordenadas_y, duration=0.5)
     pyautogui.click()
-    print("Clique realizado com sucesso!")
+    print("Dia da data de devolução selecionado com sucesso!")
 
     # Garantir que o botão de busca esteja visível e clicável
     botao_busca = WebDriverWait(navegador, 20).until(
