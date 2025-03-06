@@ -3,7 +3,7 @@
 
 ## **Visão Geral**
 Este projeto tem como objetivo realizar uma análise de precificação para comparar valores de aluguel de veículos entre duas empresas do setor: **Movida** e uma segunda locadora (a ser definida na próxima etapa).  
-A abordagem inicial foca em utilizar **web scraping** para capturar informações estruturadas sobre os veículos de cada empresa, armazenar os dados em um arquivo CSV e integrar um agente de **inteligência artificial** para responder perguntas e tirar conclusões com base nos dados extraídos.
+A abordagem inicial foca em utilizar **web scraping** para capturar informações estruturadas sobre os veículos de cada empresa, armazenar os dados em um arquivo CSV e integrar um agente de **inteligência artificial** localmente para responder perguntas e tirar conclusões com base nos dados extraídos.
 
 ---
 
@@ -16,7 +16,7 @@ Na primeira etapa, foi realizado:
 2. **Armazenamento Estruturado:** Os dados foram organizados em um arquivo CSV para facilitar análises futuras.
 ![3](https://github.com/user-attachments/assets/c68a0226-c9c0-4916-a8d7-f73241ecf5d2)
 
-3. **Criação de um Agente de IA:** Um modelo de IA (LLama 3.1) foi integrado ao projeto para responder perguntas relacionadas ou não do dataset, como:
+3. **Criação de um Agente de IA:** Um modelo de IA (LLama 3.1) localmente foi integrado ao projeto para responder perguntas relacionadas ou não do dataset, como:
    - Qual é preço médio dos veículos?
    - Quais veículos oferecem melhor custo-benefício para famílias?
    - Faça uma pesquisa em sites de classificação de veiculos ou em concessionárias e me retorne o consumo médio de combustivel de cada veiculo, destaque a fonte de onde você pesquisou os valores.
@@ -36,7 +36,7 @@ Na primeira etapa, foi realizado:
      - Melhor custo-benefício em períodos específicos.
 
 3. **Interações com o Agente de IA**
-   - Configurar o agente de IA para responder perguntas sobre as **diferenças entre as locadoras** e **recomendações personalizadas** baseadas nos dados combinados.
+   - Configurar o agente de IA localmente para responder perguntas sobre as **diferenças entre as locadoras** e **recomendações personalizadas** baseadas nos dados combinados.
    - Exemplos de perguntas para o agente:
      - "Qual empresa tem o melhor preço para SUVs?"
      - "Quais veículos oferecem o melhor custo-benefício para 5 ocupantes?"
